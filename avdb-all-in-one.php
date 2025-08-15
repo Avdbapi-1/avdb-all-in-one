@@ -1,4 +1,11 @@
 <?php
+/*
+Plugin Name: AVDB All In One
+Description: Quick install plugins and themes from GitHub. Manage all AVDB packages.
+Version: 1.4.0
+Author: AVDB Team
+*/
+
 if (!defined('ABSPATH')) exit;
 
 
@@ -104,23 +111,29 @@ add_filter('plugins_api', 'avdbwki_plugin_info', 20, 3);
 add_action('upgrader_process_complete', 'avdbwki_after_self_update', 10, 2);
 
 function avdbwki_check_for_self_update($transient) {
-    global $avdbwki_plugin_file;
+    global $avdbwki_plugin_file, $avdbwki_plugin_slug;
     if (empty($transient->checked)) return $transient;
+    
     $plugin_data = get_plugin_data(__FILE__);
     $current_version = $plugin_data['Version'] ?: '1.0.0';
-    $json = avdbwki_get_manifest_data();
+    
+    $json = avdbwki_get_manifest_data(true); // Force refresh manifest data
     if (!$json) return $transient;
+    
     $data = null;
     foreach ($json as $item) {
-        if (($item['slug'] ?? '') === 'avdb-all-in-one') {
+        // IMPROVED: Case-insensitive comparison with the dynamic plugin slug
+        if (isset($item['slug']) && strtolower($item['slug']) === strtolower($avdbwki_plugin_slug)) {
             $data = $item;
             break;
         }
     }
+    
     if (!$data || empty($data['version'])) return $transient;
+    
     if (version_compare($current_version, $data['version'], '<')) {
         $transient->response[$avdbwki_plugin_file] = (object) [
-            'slug' => dirname($avdbwki_plugin_file),
+            'slug' => $avdbwki_plugin_slug,
             'plugin' => $avdbwki_plugin_file,
             'new_version' => $data['version'],
             'url' => $data['homepage'] ?? '',
@@ -133,19 +146,26 @@ function avdbwki_check_for_self_update($transient) {
 
 function avdbwki_plugin_info($result, $action, $args) {
     global $avdbwki_plugin_slug;
-    if ($action !== 'plugin_information' || !isset($args->slug) || $args->slug !== $avdbwki_plugin_slug) {
+    
+    // Check if WordPress is asking for information about this specific plugin
+    if ($action !== 'plugin_information' || !isset($args->slug) || strtolower($args->slug) !== strtolower($avdbwki_plugin_slug)) {
         return $result;
     }
+    
     $json = avdbwki_get_manifest_data();
     if (!$json) return $result;
+    
     $data = null;
     foreach ($json as $item) {
-        if (($item['slug'] ?? '') === 'avdb-all-in-one') {
+         // IMPROVED: Case-insensitive comparison with the dynamic plugin slug
+        if (isset($item['slug']) && strtolower($item['slug']) === strtolower($avdbwki_plugin_slug)) {
             $data = $item;
             break;
         }
     }
+    
     if (!$data) return $result;
+    
     return (object) [
         'name' => $data['name'] ?? 'AVDB All In One',
         'slug' => $avdbwki_plugin_slug,

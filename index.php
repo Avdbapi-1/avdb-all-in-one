@@ -2,7 +2,7 @@
 /*
 Plugin Name: AVDB All In One
 Description: Quick install plugins and themes from GitHub. Manage all AVDB packages.
-Version: 1.2.0
+Version: 1.4.0
 Author: AVDB Team
 */
 
