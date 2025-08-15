@@ -2,7 +2,7 @@
 /*
 Plugin Name: AVDB All In One
 Description: Quick install plugins and themes from GitHub. Manage all AVDB packages.
-Version: 1.4.0
+Version: 1.0.0
 Author: AVDB Team
 */
 
@@ -14,8 +14,8 @@ $avdb_webkit_packages = [
     'slug' => 'adult-api-crawler-for-wp-script',
     'name' => 'Crawler For Wp-script',
     'type' => 'plugin',
-    'description' => 'Crawler for wp-script ver 2.0.0',
-    'download_url' => 'https://github.com/Avdbapi-1/adult-api-crawler-for-wp-script/releases/download/V2.1.0/adult-api-crawler-for-wp-script.zip',
+    'description' => 'Crawler for Wp-Script Ver 2.0.0',
+    'download_url' => 'https://github.com/Avdbapi-1/adult-api-crawler-for-wp-script/releases/download/V2.0.0/adult-api-crawler-for-wp-script.zip',
     'image' => 'https://help.avdbapi.com/image/wpscript.jpg',
     'group' => 'official',
     'note' => 'Hot'
@@ -24,8 +24,8 @@ $avdb_webkit_packages = [
     'slug' => 'adult-api-crawler-for-eroz-theme',
     'name' => 'Crawler for theme Eroz',
     'type' => 'plugin',
-    'description' => 'Crawler for eroz theme ver 2.0.0',
-    'download_url' => 'https://github.com/Avdbapi-1/adult-api-crawler-for-eroz-theme/releases/download/V2.1.0/adult-api-crawler-for-eroz-theme.zip',
+    'description' => 'Crawler for Eroz theme Ver 2.0.0',
+    'download_url' => 'https://github.com/Avdbapi-1/adult-api-crawler-for-eroz-theme/releases/download/V2.0.0/adult-api-crawler-for-eroz-theme.zip',
     'image' => 'https://help.avdbapi.com/image/eroz.jpg',
     'group' => 'official',
     'note' => 'Recommended'
@@ -34,18 +34,18 @@ $avdb_webkit_packages = [
     'slug' => 'crawl-avdbapi-vidmov',
     'name' => 'Crawler for theme Vidmov',
     'type' => 'plugin',
-    'description' => 'Crawler for vidmov theme ver 2.0.0',
-    'download_url' => 'https://github.com/Avdbapi-1/crawl-avdbapi-vidmov/releases/download/V2.4.0/crawl-avdbapi-vidmov.zip',
+    'description' => 'Crawler for VidMov theme Ver 2.3.0',
+    'download_url' => 'https://github.com/Avdbapi-1/crawl-avdbapi-vidmov/releases/download/V2.3.0/crawl-avdbapi-vidmov.zip',
     'image' => 'https://help.avdbapi.com/image/vidmov.jpg',
     'group' => 'official',
     'note' => ''
   ],
   [
     'slug' => 'Theme-Eroz-WP',
-    'name' => 'Eroz Theme',
+    'name' => 'Eroz Theme Ver 1.8.4',
     'type' => 'theme',
     'description' => 'Eroz Theme',
-    'download_url' => 'https://github.com/Avdbapi-1/Theme-Eroz-WP/archive/refs/heads/main.zip',
+    'download_url' => 'https://github.com/Avdbapi-1/Theme-Eroz-WP/releases/download/V1.8.4/Theme-Eroz-WP.zip',
     'image' => 'https://help.avdbapi.com/image/eroz.jpg',
     'group' => 'official',
     'note' => 'Recommended'
@@ -55,7 +55,7 @@ $avdb_webkit_packages = [
     'name' => 'Theme Vidmov Wordpress',
     'type' => 'theme',
     'description' => 'Theme Vidmov Wordpress',
-    'download_url' => 'https://github.com/Avdbapi-1/theme-vidmov-wordpress/archive/refs/heads/main.zip',
+    'download_url' => 'https://github.com/Avdbapi-1/theme-vidmov-wordpress/releases/download/V2.3.0/theme-vidmov-wordpress.zip',
     'image' => 'https://help.avdbapi.com/image/vidmov.jpg',
     'group' => 'official',
     'note' => 'Hot'
@@ -65,7 +65,7 @@ $avdb_webkit_packages = [
     'name' => 'Theme child Vidmov',
     'type' => 'theme',
     'description' => 'Vidmov Child',
-    'download_url' => 'https://github.com/Avdbapi-1/theme-vidmov-wordpress-childtheme/archive/refs/heads/main.zip',
+    'download_url' => 'https://github.com/Avdbapi-1/theme-vidmov-wordpress-childtheme/releases/download/V2.3.0/theme-vidmov-wordpress-childtheme.zip',
     'image' => 'https://help.avdbapi.com/image/vidmov.jpg',
     'group' => 'official',
     'note' => 'required'
@@ -185,7 +185,7 @@ function avdbwki_after_self_update($upgrader, $hook_extra) {
     global $avdbwki_plugin_file;
     if (isset($hook_extra['action']) && $hook_extra['action'] === 'update' && $hook_extra['type'] === 'plugin' ) {
         if (isset($hook_extra['plugins']) && in_array($avdbwki_plugin_file, $hook_extra['plugins'])) {
-             wp_clean_plugins_cache();
+        wp_clean_plugins_cache();
              delete_transient('avdbwki_manifest_data');
         }
     }
@@ -224,8 +224,8 @@ function avdbwki_get_installed_path($pkg, $allPlugins = null, $allThemes = null)
         }
     }
     $path_cache[$cache_key] = '';
-    return '';
-}
+        return '';
+    }
 
 function avdbwki_is_package_installed($pkg, $plugins = null, $themes = null) {
     return !empty(avdbwki_get_installed_path($pkg, $plugins, $themes));
@@ -340,6 +340,7 @@ function avdb_webkit_installer_page() {
         <button type="button" id="avdbwki-clear-cache" class="avdbwki-find-btn" style="background: #f59e0b;"><span class="text">Clear Cache</span></button>
         <div id="avdbwki-result"></div>
         <div class="avdbwki-section-title official">AVDB Official Packages</div>
+        <div class="avdbwki-note">Installing multiple crawl plugins on the same website at the same time will cause errors, please delete the old crawl when downloading the new crawl.</div>
         <div class="avdbwki-grid">
         <?php foreach ($official as $pkg):
             $is_installed = avdbwki_is_package_installed($pkg, $allPlugins, $allThemes);
@@ -459,7 +460,7 @@ add_action('wp_ajax_avdb_webkit_install', function() {
     require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
     if (!WP_Filesystem()) wp_send_json_error('Cannot access filesystem');
     
-    $url = $pkg['download_url'];
+        $url = $pkg['download_url'];
     $type = strtolower($pkg['type']);
     $skin = new WP_Ajax_Upgrader_Skin();
     $upgrader = null;
@@ -473,7 +474,7 @@ add_action('wp_ajax_avdb_webkit_install', function() {
             wp_send_json_error('Unknown package type');
         }
         
-        $result = $upgrader->install($url);
+            $result = $upgrader->install($url);
         
         if (is_wp_error($result) || $result === false) {
              $error_message = $skin->get_error_messages() ? implode('; ', $skin->get_error_messages()) : 'Installation failed.';
@@ -490,7 +491,7 @@ add_action('wp_ajax_avdb_webkit_install', function() {
                 foreach ($all_plugins as $file => $details) {
                     if (strpos($file, $destination_name . '/') === 0) {
                         $plugin_file = $file;
-                        break;
+                                break;
                     }
                 }
 
@@ -498,7 +499,7 @@ add_action('wp_ajax_avdb_webkit_install', function() {
                     $activation = activate_plugin($plugin_file);
                     if (is_wp_error($activation)) {
                         wp_send_json_success(['message' => $pkg['name'] . ' installed but failed to activate: ' . $activation->get_error_message()]);
-                    } else {
+                } else {
                         wp_send_json_success(['message' => $pkg['name'] . ' installed and activated.']);
                     }
                 } else {
@@ -549,7 +550,7 @@ add_action('wp_ajax_avdbwki_update_package', function() {
     $manifest_entry = null;
     foreach ($json as $item) { if (($item['slug'] ?? '') === $slug) { $manifest_entry = $item; break; } }
     if (!$manifest_entry || empty($manifest_entry['download_url'])) wp_send_json_error('Package not in manifest or missing URL');
-    
+
     require_once ABSPATH . 'wp-admin/includes/file.php';
     require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
     if (!WP_Filesystem()) wp_send_json_error('Cannot access filesystem');
@@ -581,4 +582,4 @@ add_action('wp_ajax_avdbwki_clear_cache', function() {
     if (!current_user_can('manage_options') || !check_ajax_referer('avdb_update_nonce', '_wpnonce', false)) wp_send_json_error('Security check failed');
     delete_transient('avdbwki_manifest_data');
     wp_send_json_success('Cache cleared.');
-});
+}); 
