@@ -53,7 +53,6 @@
 ## 📚 Documentation
 
 - **Full Documentation**: [help.avdbapi.com](https://help.avdbapi.com)
-- **Demo Page**: [test.html](test.html)
 
 ## 🤝 Support
 
