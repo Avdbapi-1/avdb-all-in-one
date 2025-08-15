@@ -1,12 +1,6 @@
 <?php
 if (!defined('ABSPATH')) exit;
 
-/**
- * AVDB All In One Packages
- * * QUAN TRỌNG: 
- * 1. 'slug' PHẢI là tên "sạch", không có '-main'. Slug này phải khớp với slug trong manifest.json của bạn.
- * 2. 'download_url' có thể trỏ đến file ZIP của Release hoặc của Branch. Plugin sẽ xử lý được cả hai.
- */
 $avdb_webkit_packages = [
   [
     'slug' => 'adult-api-crawler-for-wp-script',
