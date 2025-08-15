@@ -1,3 +1,4 @@
+# Must download the file in release, do not use .zip file (with extension -main.zip) because the plugin cannot be updated later.
 # AVDB All In One
 
 A comprehensive WordPress plugin for managing and installing AVDB packages (plugins and themes) with automatic updates and smart detection.
