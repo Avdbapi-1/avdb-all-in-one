@@ -1,0 +1,47 @@
+[
+  {
+  "slug": "avdb-all-in-one",
+  "version": "1.0.0",
+  "download_url": "https://github.com/Avdbapi-1/avdb-all-in-one/releases/download/V1.0.0/avdb-all-in-one.zip",
+  "name": "AVDB All In One",
+  "homepage": "https://github.com/Avdbapi-1/avdb-all-in-one",
+  "description": "Quick install plugins and themes from GitHub. Manage all AVDB packages.",
+  "changelog": "Version 1.0.0",
+  },
+  {
+    "slug": "adult-api-crawler-for-wp-script",
+    "version": "2.0.0",
+    "download_url": "https://github.com/Avdbapi-1/adult-api-crawler-for-wp-script/releases/download/V2.0.0/adult-api-crawler-for-wp-script.zip",
+    "changelog": "Initial release version 2.0.0"
+  },
+  {
+    "slug": "adult-api-crawler-for-eroz-theme",
+    "version": "2.1.0",
+    "download_url": "https://github.com/Avdbapi-1/adult-api-crawler-for-eroz-theme/releases/download/V2.1.0/adult-api-crawler-for-eroz-theme.zip",
+    "changelog": "Initial release version 2.1.0"
+  },
+  {
+    "slug": "crawl-avdbapi-vidmov",
+    "version": "2.3.0",
+    "download_url": "https://github.com/Avdbapi-1/crawl-avdbapi-vidmov/releases/download/V2.3.0/crawl-avdbapi-vidmov.zip",
+    "changelog": "Initial release version 2.3.0"
+  },
+  {
+    "slug": "Theme-Eroz-WP",
+    "version": "1.8.4",
+    "download_url": "https://github.com/Avdbapi-1/Theme-Eroz-WP/releases/download/V1.8.4/Theme-Eroz-WP.zip",
+    "changelog": "Initial release version 1.8.4"
+  },
+  {
+    "slug": "theme-vidmov-wordpress",
+    "version": "2.3.0",
+    "download_url": "https://github.com/Avdbapi-1/theme-vidmov-wordpress/releases/download/V2.3.0/theme-vidmov-wordpress.zip",
+    "changelog": "Initial release version 2.3.0"
+  },
+  {
+    "slug": "theme-vidmov-wordpress-childtheme",
+    "version": "2.3.0",
+    "download_url": "https://github.com/Avdbapi-1/theme-vidmov-wordpress-childtheme/releases/download/V2.3.0/theme-vidmov-wordpress-childtheme.zip",
+    "changelog": "Initial release version 2.3.0"
+  }
+]
