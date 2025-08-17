@@ -1,12 +1,13 @@
 [
   {
-  "slug": "avdb-all-in-one",
-  "version": "1.0.0",
-  "download_url": "https://github.com/Avdbapi-1/avdb-all-in-one/releases/download/V1.0.0/avdb-all-in-one.zip",
-  "name": "AVDB All In One",
-  "homepage": "https://github.com/Avdbapi-1/avdb-all-in-one",
-  "description": "Quick install plugins and themes from GitHub. Manage all AVDB packages.",
-  "changelog": "Version 1.0.0",
+    "slug": "avdb-all-in-one",
+    "version": "1.0.0",
+    "download_url": "https://github.com/Avdbapi-1/avdb-all-in-one/releases/download/V1.0.0/avdb-all-in-one.zip",
+    "name": "AVDB All In One",
+    "homepage": "https://github.com/Avdbapi-1/avdb-all-in-one",
+    "description": "Quick install plugins and themes from GitHub. Manage all AVDB packages.",
+    "changelog": "Version 1.0.0",
+    "tested": "6.4.2"
   },
   {
     "slug": "adult-api-crawler-for-wp-script",
@@ -44,4 +45,4 @@
     "download_url": "https://github.com/Avdbapi-1/theme-vidmov-wordpress-childtheme/releases/download/V2.3.0/theme-vidmov-wordpress-childtheme.zip",
     "changelog": "Initial release version 2.3.0"
   }
-]
+] 
