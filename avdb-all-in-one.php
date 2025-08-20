@@ -86,7 +86,7 @@ $avdb_webkit_packages = [
 $avdbwki_current_plugin = plugin_basename(__FILE__);
 $avdbwki_plugin_slug = dirname($avdbwki_current_plugin);
 $avdbwki_plugin_file = $avdbwki_current_plugin;
-$avdbwki_self_update_url = 'https://help.avdbapi.com/manifest.json';
+$avdbwki_self_update_url = 'https://raw.githubusercontent.com/Avdbapi-1/avdb-all-in-one/main/manifest.json';
 
 // --- CORE LOGIC ---
 
