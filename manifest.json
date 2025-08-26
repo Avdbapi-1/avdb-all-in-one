@@ -44,5 +44,11 @@
     "version": "2.3.0",
     "download_url": "https://github.com/Avdbapi-1/theme-vidmov-wordpress-childtheme/releases/download/V2.3.0/theme-vidmov-wordpress-childtheme.zip",
     "changelog": "Initial release version 2.3.0"
+  }, 
+  {
+    "slug": "adult-api-crawler-for-videoclub-theme",
+    "version": "2.0.0",
+    "download_url": "https://github.com/Avdbapi-1/adult-api-crawler-for-videoclub-theme/releases/download/V2.0.0/adult-api-crawler-for-videoclub-theme.zip",
+    "changelog": "original 2.0.0"
   }
 ] 
