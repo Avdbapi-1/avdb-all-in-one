@@ -11,9 +11,9 @@
   },
   {
     "slug": "adult-api-crawler-for-wp-script",
-    "version": "2.0.0",
-    "download_url": "https://github.com/Avdbapi-1/adult-api-crawler-for-wp-script/releases/download/V2.0.0/adult-api-crawler-for-wp-script.zip",
-    "changelog": "Initial release version 2.0.0"
+    "version": "2.1.0",
+    "download_url": "https://github.com/Avdbapi-1/adult-api-crawler-for-wp-script/releases/download/V2.1.0/adult-api-crawler-for-wp-script.zip",
+    "changelog": "update ver 2.1 fix cronjob"
   },
   {
     "slug": "adult-api-crawler-for-eroz-theme",
