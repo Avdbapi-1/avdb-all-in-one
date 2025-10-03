@@ -1,12 +1,12 @@
 [
   {
     "slug": "avdb-all-in-one",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "download_url": "https://github.com/Avdbapi-1/avdb-all-in-one/releases/download/V1.0.3/avdb-all-in-one.zip",
     "name": "AVDB All In One",
     "homepage": "https://github.com/Avdbapi-1/avdb-all-in-one",
     "description": "Quick install plugins and themes from GitHub. Manage all AVDB packages.",
-    "changelog": "Version 1.0.3",
+    "changelog": "Version 1.0.4",
     "tested": "6.4.2"
   },
   {
