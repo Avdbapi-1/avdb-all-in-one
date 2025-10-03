@@ -41,6 +41,16 @@ $avdb_webkit_packages = [
     'note' => ''
   ],
   [
+    'slug' => 'adult-api-crawler-for-videoclub-theme',
+    'name' => 'Crawl Eroz Theme Ver 1.8.4',
+    'type' => 'plugin',
+    'description' => 'Crawl for Videoclub theme ver 2.0.0',
+    'download_url' => 'https://github.com/Avdbapi-1/adult-api-crawler-for-videoclub-theme/releases/download/V2.0.0/adult-api-crawler-for-videoclub-theme.zip',
+    'image' => 'https://help.avdbapi.com/image/eroz.jpg',
+    'group' => 'official',
+    'note' => 'Recommended'
+  ],
+  [
     'slug' => 'Theme-Eroz-WP',
     'name' => 'Eroz Theme Ver 1.8.4',
     'type' => 'theme',
@@ -66,6 +76,16 @@ $avdb_webkit_packages = [
     'type' => 'theme',
     'description' => 'Vidmov Child',
     'download_url' => 'https://github.com/Avdbapi-1/theme-vidmov-wordpress-childtheme/releases/download/V2.3.0/theme-vidmov-wordpress-childtheme.zip',
+    'image' => 'https://help.avdbapi.com/image/vidmov.jpg',
+    'group' => 'official',
+    'note' => 'required'
+  ],
+  [
+    'slug' => 'VideoClub-Theme',
+    'name' => 'Theme Videoclub',
+    'type' => 'theme',
+    'description' => 'Theme Videoclub',
+    'download_url' => 'https://github.com/Avdbapi-1/VideoClub-Theme/releases/download/V1.0.4/videoclub.zip',
     'image' => 'https://help.avdbapi.com/image/vidmov.jpg',
     'group' => 'official',
     'note' => 'required'
