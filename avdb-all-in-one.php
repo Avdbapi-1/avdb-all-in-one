@@ -42,7 +42,7 @@ $avdb_webkit_packages = [
   ],
   [
     'slug' => 'adult-api-crawler-for-videoclub-theme',
-    'name' => 'Crawl Eroz Theme Ver 1.8.4',
+    'name' => 'Crawl VideoClub Theme',
     'type' => 'plugin',
     'description' => 'Crawl for Videoclub theme ver 2.0.0',
     'download_url' => 'https://github.com/Avdbapi-1/adult-api-crawler-for-videoclub-theme/releases/download/V2.0.0/adult-api-crawler-for-videoclub-theme.zip',
