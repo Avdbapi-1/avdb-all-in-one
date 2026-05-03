@@ -2,7 +2,7 @@
   {
     "slug": "avdb-all-in-one",
     "version": "1.0.4",
-    "download_url": "https://github.com/Avdbapi-1/avdb-all-in-one/releases/download/V1.0.3/avdb-all-in-one.zip",
+    "download_url": "https://github.com/Avdbapi-1/avdb-all-in-one/releases/download/V1.0.4/avdb-all-in-one.zip",
     "name": "AVDB All In One",
     "homepage": "https://github.com/Avdbapi-1/avdb-all-in-one",
     "description": "Quick install plugins and themes from GitHub. Manage all AVDB packages.",
@@ -26,6 +26,12 @@
     "version": "2.3.0",
     "download_url": "https://github.com/Avdbapi-1/crawl-avdbapi-vidmov/releases/download/V2.3.0/crawl-avdbapi-vidmov.zip",
     "changelog": "Initial release version 2.3.0"
+  },
+  {
+    "slug": "avdbapi-crawler-dooplay",
+    "version": "1.0.0",
+    "download_url": "https://github.com/Avdbapi-1/avdbapi-crawler-dooplay/releases/download/V1.0.0/avdbapi-crawler-dooplay.zip",
+    "changelog": "Realease V1.0.0"
   },
   {
     "slug": "Theme-Eroz-WP",
