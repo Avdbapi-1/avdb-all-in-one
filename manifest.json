@@ -2,7 +2,7 @@
   {
     "slug": "avdb-all-in-one",
     "version": "1.0.5",
-    "download_url": "https://github.com/Avdbapi-1/avdb-all-in-one/releases/download/V1.0.4/avdb-all-in-one.zip",
+    "download_url": "https://github.com/Avdbapi-1/avdb-all-in-one/releases/download/v1.0.5/avdb-all-in-one.zip",
     "name": "AVDB All In One",
     "homepage": "https://github.com/Avdbapi-1/avdb-all-in-one",
     "description": "Quick install plugins and themes from GitHub. Manage all AVDB packages.",
